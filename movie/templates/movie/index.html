@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500" rel="stylesheet"> 
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'movie/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'movie/fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
 	
     <!-- Owl carousel -->
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-	 <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="{% static 'movie/css/owl.carousel.css' %}" rel="stylesheet">
+	 <link href="{% static 'movie/css/owl.theme.default.min.css' %}" rel="stylesheet">
 
     <!-- Off Canvas Menu -->
-    <link href="assets/css/offcanvas.min.css" rel="stylesheet">
+    <link href="{% static 'movie/css/offcanvas.min.css' %}" rel="stylesheet">
 
     <!--Theme CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="{% static 'movie/css/style.css' %}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,13 +62,13 @@
 				<div class="row">
 		    	 	<div class="col-md-3">
 						<div class="logo">
-						<a  href="index.html"><img class="img-responsive" src="assets/img/logo.png" alt=""></a>
+						<a  href="index.html"><img class="img-responsive" src="{% static 'movie/img/logo.png' %}" alt=""></a>
 						</div><!--logo-->
 		    	 	</div><!--col-md-3-->
 		    	 	
 		    	 	<div class="col-md-6">
 						<div class="header_ad_banner">
-						<a  href="#"><img class="img-responsive" src="assets/img/img_ad.jpg" alt=""></a>
+						<a  href="#"><img class="img-responsive" src="{% static 'movie/img/img_ad.jpg' %}" alt=""></a>
 						</div>
 		    	 	</div><!--col-md-6-->
 		    	 	
@@ -148,7 +149,7 @@
 							<div class="item active feature_news_item">
 								<div class="item_wrapper">
 									<div class="item_img">
-										<img class="img-responsive" src="assets/img/img-carousel1.jpg" alt="Chania">
+										<img class="img-responsive" src="{% static 'movie/img/img-carousel1.jpg' %}" alt="Chania">
 									</div> <!--item_img-->
 									<div class="item_title_date">
 										<div class="news_item_title">
@@ -164,7 +165,7 @@
 							<div class="item feature_news_item">
 								<div class="item_wrapper">
 									<div class="item_img">
-										<img class="img-responsive" src="assets/img/img-carousel2.jpg" alt="Chania">
+										<img class="img-responsive" src="{% static 'movie/img/img-carousel2.jpg' %}" alt="Chania">
 									</div> <!--item_img--> 
 									<div class="item_title_date">
 										<div class="news_item_title">
@@ -202,7 +203,7 @@
 	                			<div class="item active">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img_feature.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img_feature.jpg' %}" alt="Chania">
 										</div> <!--item_img-->
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -223,7 +224,7 @@
 	                			<div class="item active">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img_feature2.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img_feature2.jpg' %}" alt="Chania">
 										</div> <!--item_img-->
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -257,7 +258,7 @@
 								<div class="item feature_news_item">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img_feature_news.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img_feature_news.jpg' %}" alt="Chania">
 										</div><!--item_img--> 
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -276,7 +277,7 @@
 								<div class="media_wrapper">
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/img/img-list.jpg" alt="Generic placeholder image"></a>
+											<a href="#"><img class="media-object" src="{% static 'movie/img/img-list.jpg' %}" alt="Generic placeholder image"></a>
 										</div><!--media-left-->
 										<div class="media-body">
 											<h3 class="media-heading"><a href="#">Machester United start the player
@@ -289,7 +290,7 @@
 
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/img/img-list2.jpg" alt="Generic placeholder image"></a>
+											<a href="#"><img class="media-object" src="{% static 'movie/img/img-list2.jpg' %}" alt="Generic placeholder image"></a>
 										</div><!--media-left-->
 										<div class="media-body">
 											<h3 class="media-heading"><a href="#">Machester United start the player
@@ -302,7 +303,7 @@
 
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/img/img-list3.jpg" alt="Generic placeholder image"></a>
+											<a href="#"><img class="media-object" src="{% static 'movie/img/img-list3.jpg' %}" alt="Generic placeholder image"></a>
 										</div><!--media-left-->
 										<div class="media-body">
 											<h3 class="media-heading"><a href="#">Machester United start the player
@@ -315,7 +316,7 @@
 
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/img/img-list4.jpg" alt="Generic placeholder image"></a>
+											<a href="#"><img class="media-object" src="{% static 'movie/img/img-list4.jpg' %}" alt="Generic placeholder image"></a>
 										</div><!--media-left-->
 										<div class="media-body">
 											<h3 class="media-heading"><a href="#">Machester United start the player
@@ -338,7 +339,7 @@
 							<div class="item active feature_news_item">
 								<div class="item_wrapper">
 									<div class="item_img">
-										<img class="img-responsive" src="assets/img/img-hockey.jpg" alt="Chania">
+										<img class="img-responsive" src="{% static 'movie/img/img-hockey.jpg' %}" alt="Chania">
 									</div><!--item_img-->  
 									<div class="item_title_date">
 										<div class="news_item_title">
@@ -357,7 +358,7 @@
 							<div class="media_wrapper">
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list5.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list5.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -370,7 +371,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list6.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list6.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -383,7 +384,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list7.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list7.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -396,7 +397,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list4.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list4.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -418,7 +419,7 @@
 							<div class="item active feature_news_item">
 								<div class="item_wrapper">
 									<div class="item_img">
-										<img class="img-responsive" src="assets/img/img_feature_news3.jpg" alt="Chania">
+										<img class="img-responsive" src="{% static 'movie/img/img_feature_news3.jpg' %}" alt="Chania">
 									</div><!--item_img-->  
 									<div class="item_title_date">
 										<div class="news_item_title">
@@ -437,7 +438,7 @@
 							<div class="media_wrapper">
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list7.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list7.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -450,7 +451,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list8.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list8.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -463,7 +464,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list9.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list9.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -476,7 +477,7 @@
 
 								<div class="media">
 									<div class="media-left">
-										<a href="#"><img class="media-object" src="assets/img/img-list4.jpg" alt="Generic placeholder image"></a>
+										<a href="#"><img class="media-object" src="{% static 'movie/img/img-list4.jpg' %}" alt="Generic placeholder image"></a>
 									</div><!--media-left-->
 									<div class="media-body">
 										<h3 class="media-heading"><a href="#">Machester United start the player
@@ -499,7 +500,7 @@
 	                			<div class="item">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img-news.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img-news.jpg' %}" alt="Chania">
 										</div><!--item_img--> 
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -520,7 +521,7 @@
 	                			<div class="item active">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img-news1.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img-news1.jpg' %}" alt="Chania">
 										</div><!--item_img--> 
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -541,7 +542,7 @@
 	                			<div class="item active">
 									<div class="item_wrapper">
 										<div class="item_img">
-											<img class="img-responsive" src="assets/img/img-news2.jpg" alt="Chania">
+											<img class="img-responsive" src="{% static 'movie/img/img-news2.jpg' %}" alt="Chania">
 										</div><!--item_img--> 
 										<div class="item_title_date">
 											<div class="news_item_title">
@@ -572,7 +573,7 @@
 						<div class="tab-pane active" id="1">
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#">Spain going to made class football</a></h4>
@@ -588,7 +589,7 @@
 
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list5.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list5.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#">Spain going to made class football</a></h4>
@@ -604,7 +605,7 @@
 
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list2.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list2.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -620,7 +621,7 @@
 
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list3.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list3.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -638,7 +639,7 @@
 						<div class="tab-pane" id="2">
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list4.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list4.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -654,7 +655,7 @@
 
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img class="media-object" src="assets/img/img-list.jpg" alt="Generic placeholder image"></a>
+									<a href="#"><img class="media-object" src="{% static 'movie/img/img-list.jpg' %}" alt="Generic placeholder image"></a>
 								</div><!--media-left-->
 								<div class="media-body">
 									<h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -672,18 +673,18 @@
 				</div><!--tab-->
 
 				<div class="ad">
-					<img class="img-responsive" src="assets/img/img-sitebar.jpg" alt="img" />
-					<img class="img-responsive" src="assets/img/img-sitebar.jpg" alt="img" />
-					<img class="img-responsive" src="assets/img/img-sitebar.jpg" alt="img" />
-					<img class="img-responsive" src="assets/img/img-sitebar.jpg" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-sitebar.jpg' %}" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-sitebar.jpg' %}" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-sitebar.jpg' %}" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-sitebar.jpg' %}" alt="img" />
 				</div><!--ad-->
 				
 				<div class="ad">
-					<img class="img-responsive" src="assets/img/img-ad.jpg" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-ad.jpg' %}" alt="img" />
 				</div>
 
 				<div class="ad">
-					<img class="img-responsive" src="assets/img/img-ad2.jpg" alt="img" />
+					<img class="img-responsive" src="{% static 'movie/img/img-ad2.jpg' %}" alt="img" />
 				</div>
 
                 <div class="most_comment">
@@ -692,7 +693,7 @@
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <a href="#"><img class="media-object" src="assets/img/img-list.jpg" alt="Generic placeholder image"></a>
+                            <a href="#"><img class="media-object" src="{% static 'movie/img/img-list.jpg' %}" alt="Generic placeholder image"></a>
                         </div><!--media-left-->
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -704,7 +705,7 @@
                     </div><!--media-->
                     <div class="media">
                         <div class="media-left">
-                            <a href="#"><img class="media-object" src="assets/img/img-list2.jpg" alt="Generic placeholder image"></a>
+                            <a href="#"><img class="media-object" src="{% static 'movie/img/img-list2.jpg' %}" alt="Generic placeholder image"></a>
                         </div><!--media-left-->
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -716,7 +717,7 @@
                     </div><!--media-->
                     <div class="media">
                         <div class="media-left">
-                            <a href="#"><img class="media-object" src="assets/img/img-list3.jpg" alt="Generic placeholder image"></a>
+                            <a href="#"><img class="media-object" src="{% static 'movie/img/img-list3.jpg' %}" alt="Generic placeholder image"></a>
                         </div><!--media-left-->
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -728,7 +729,7 @@
                     </div><!--media-->
                     <div class="media">
                         <div class="media-left">
-                            <a href="#"><img class="media-object" src="assets/img/img-list3.jpg" alt="Generic placeholder image"></a>
+                            <a href="#"><img class="media-object" src="{% static 'movie/img/img-list3.jpg' %}" alt="Generic placeholder image"></a>
                         </div><!--media-left-->
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Spain going to made class football</a></h3>
@@ -753,42 +754,42 @@
 
 					<div id="feature_video_slider" class="owl-carousel">
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
 							</div><!--video_info-->
 						</div>
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video2.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video2.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
 							</div><!--video_info-->
 						</div>
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video3.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video3.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
 							</div><!--video_info-->
 						</div>
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video2.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video2.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
 							</div><!--video_info-->
 						</div>
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
 							</div><!--video_info-->
 						</div>
 						<div class="item">
-							<div class="video_thumb"><img   src="assets/img/video3.jpg" alt="Owl Image"></div>
+							<div class="video_thumb"><img   src="{% static 'movie/img/video3.jpg' %}" alt="Owl Image"></div>
 							<div class="video_info">
 								<div class="video_item_title"><h3><a href="#">Track & Fiels famous still in the craze of Runner world</a></h3></div><!--video_item_title-->
 								<div class="item_meta"><a href="#">20Aug- 2015</a></div><!--item_meta-->
@@ -866,7 +867,7 @@
 				<div class="col-md-3">
  					<div class="text_widget footer_widget">
 						<div class="footer_widget_title"><h2>Editor’s Message</h2></div>
-						<img src="assets/img/img-author.jpg" />
+						<img src="{% static 'movie/img/img-author.jpg' %}" />
 						<div class="footer_widget_content">Collaborativelyadministrate empowered marketsplug-and-play networks. Dynamic procrastinate after.marketsplug-and-play networks. Dynamic procrastinate users after. Dynamic procrastinateafter. marketsplug-and-play networks. Dynamic procrastinate users after...</div>
 					</div>
 				</div><!--col-xs-3-->
@@ -897,19 +898,19 @@
 </div> <!--main-wrapper-->
   
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="{% static 'movie/js/jquery.min.js' %}"></script>
 
 <!-- Owl carousel -->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="{% static 'movie/js/owl.carousel.js' %}"></script>
 
 <!-- Bootstrap -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{% static 'movie/js/bootstrap.min.js' %}"></script>
 
 <!-- Theme Script File-->
-<script src="assets/js/script.js"></script> 
+<script src="{% static 'movie/js/script.js' %}"></script>
 
 <!-- Off Canvas Menu -->
-<script src="assets/js/offcanvas.min.js"></script> 
+<script src="{% static 'movie/js/offcanvas.min.js' %}"></script>
 
 
    
