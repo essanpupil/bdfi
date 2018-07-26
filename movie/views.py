@@ -9,7 +9,7 @@ def left_sidebar(request):
     return render(request, 'movie/left-sidebar.html')
 
 
-def rigth_sidebar(request):
+def right_sidebar(request):
     return render(request, 'movie/right-sidebar.html')
 
 

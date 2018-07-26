@@ -21,6 +21,6 @@ urlpatterns = [
 
     path('', movie_views.home, name='home'),
     path('left-sidebar', movie_views.left_sidebar, name='left'),
-    path('right-sidebar', movie_views.rigth_sidebar, name='right'),
+    path('right-sidebar', movie_views.right_sidebar, name='right'),
     path('no-sidebar', movie_views.no_sidebar, name='center'),
 ]
