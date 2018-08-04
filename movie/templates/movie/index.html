@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-{% load static %}
+{% load static embed_video_tags %}
 <!--
 	Verti by HTML5 UP
 	html5up.net | @ajlkn
@@ -79,7 +79,10 @@
                         <div class="col-4 col-12-medium">
                             <!-- Box -->
                             <section class="box feature">
-                                <a href="#" class="image featured"><img src="{% static 'movie/images/pic01.jpg' %}" alt="" /></a>
+                                {% video film.video as film_video %}
+                                    <a href="{{ film_video.url }}" class="image featured"><img src="{{ film_video.thumbnail }}" alt="" /></a>
+                                    <!--{% video film_video 'small' %}-->
+                                {% endvideo %}
                                 <div class="inner">
                                     <header>
                                         <h2>{{ film.title }}</h2>

@@ -4,7 +4,7 @@ from movie.models import Movie
 
 
 def home(request):
-    feature_films = Movie.objects.all()
+    feature_films = Movie.objects.all()[:3]
     context = {'feature_films': feature_films}
     return render(request, 'movie/index.html', context)
 
