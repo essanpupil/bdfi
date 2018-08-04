@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
+from movie.models import Movie
+
 
 def home(request):
-    return render(request, 'movie/index.html')
+    feature_films = Movie.objects.all()
+    context = {'feature_films': feature_films}
+    return render(request, 'movie/index.html', context)
 
 
 def left_sidebar(request):
