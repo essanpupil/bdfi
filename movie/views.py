@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
 
 from movie.models import Movie, Genre
 
@@ -13,3 +14,8 @@ def home(request):
         'newest_film': newest_film,
     }
     return render(request, 'movie/index.html', context)
+
+
+class FilmDetail(DetailView):
+    model = Movie
+    template_name = 'movie/movie_detail.html'
