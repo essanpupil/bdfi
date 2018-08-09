@@ -67,7 +67,7 @@
                 <a class="text-dark" href="#">{{ film.title }}</a>
               </h3>
               <div class="mb-1 text-muted">{{ film.release_date }}</div>
-              <p class="card-text mb-auto">{{ film.synopsis }}</p>
+              <p class="card-text mb-auto">{{ film.synopsis|truncatewords:20 }}</p>
               <a href="{% url 'movie:detail' film.id %}">Continue reading</a>
             </div>
               {% video film.video '200x250' %}
