@@ -18,7 +18,7 @@
     <link href="{% static 'movie/css/blog.css' %}" rel="stylesheet">
   </head>
 
-  <body>
+  <body>{% block page_content %}
 
     <div class="container">
       <header class="blog-header py-3">
@@ -188,6 +188,7 @@
 
     </main><!-- /.container -->
 
+    {% endblock page_content %}
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
       <p>
