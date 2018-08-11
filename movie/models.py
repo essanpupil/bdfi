@@ -3,6 +3,14 @@ from django.db import models
 from embed_video.fields import EmbedVideoField
 
 
+class Location(models.Model):
+    city = models.CharField(max_length=64)
+    province = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.city
+
+
 class Genre(models.Model):
     name = models.CharField(max_length=32)
 
@@ -46,8 +54,11 @@ class Movie(models.Model):
 
 
 class Actor(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=128)
+    fullname = models.CharField(max_length=255)
     birth_of_date = models.DateField()
+    place_of_birth = models.ForeignKey(Location, on_delete=models.CASCADE)
+    role = models.ManyToManyField(Role, null=True)
 
     def __str__(self):
         return self.name
