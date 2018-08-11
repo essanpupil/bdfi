@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
-from movie.models import Movie, Genre
+from movie.models import Movie, Genre, Actor
 
 
 def home(request):
@@ -21,6 +21,11 @@ class FilmDetail(DetailView):
     template_name = 'movie/movie_detail.html'
 
 
+class ActorDetail(DetailView):
+    model = Actor
+    template_name = 'movie/actor_detail.html'
+
+
 class MovieList(ListView):
     model = Movie
     template_name = 'movie/movie_list.html'
@@ -31,3 +36,8 @@ class TVList(ListView):
     model = Movie
     template_name = 'movie/tv_list.html'
     queryset = Movie.objects.filter(category=Movie.TV_SERIES)
+
+
+class ActorList(ListView):
+    model = Actor
+    template_name = 'movie/actor_list.html'

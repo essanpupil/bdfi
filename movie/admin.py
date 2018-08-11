@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from movie.models import Movie, Actor, Genre, Trivia, Review, Role, ProductionHouse, \
-    Cast, Credit
+    Cast, Credit, Location
 
 admin.site.register(Movie)
 admin.site.register(Actor)
@@ -12,4 +12,5 @@ admin.site.register(Role)
 admin.site.register(ProductionHouse)
 admin.site.register(Cast)
 admin.site.register(Credit)
+admin.site.register(Location)
 
