@@ -12,7 +12,7 @@
         <div class="col-md-8 blog-main">
             {% for movie in movie_list %}
             <div class="blog-post">
-                <h2 class="blog-post-title">{{ movie.title }}</h2>
+                <h2 class="blog-post-title"><a href="{% url 'movie:detail' movie.id %}">{{ movie.title }}</a></h2>
                 <p class="blog-post-meta">{{ movie.release_date }}</p>
                 {% video movie.video as movie_video %}
                 <img width="40%" src="{{ movie_video.thumbnail }}">

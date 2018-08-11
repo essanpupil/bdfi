@@ -24,3 +24,4 @@ class FilmDetail(DetailView):
 class MovieList(ListView):
     model = Movie
     template_name = 'movie/movie_list.html'
+    queryset = Movie.objects.filter(category=Movie.FILM)
