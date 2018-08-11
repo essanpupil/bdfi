@@ -1,5 +1,5 @@
 {% extends 'movie/index.html' %}
-{% load static %}
+{% load static embed_video_tags %}
 {% block page_content %}
     <div class="container">
       <header class="blog-header py-3">
@@ -39,9 +39,7 @@
           <div class="row">
               <div class="col-md-8 blog-main">
                   <div class="blog-post">
-                    <p>{{ movie.synopsis }}</p>
-                    <hr>
-                    <h2>Detail Teknis</h2>
+                      {% video movie.video 'tiny' %}
                     <table>
                         <tr><th>Rumah produksi</th><td>&nbsp;</td><td>{{ movie.production_house }}</td></tr>
                         <tr><th>Tanggal mulai tayang</th><td>&nbsp;</td><td>{{ movie.release_date }}</td></tr>
@@ -60,8 +58,8 @@
               </div>
               <aside class="col-md-4 blog-sidebar">
                   <div class="p-3 bg-light rounded">
-                      <h3>About</h3>
-                      <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                      <h3>Synopsis</h3>
+                      <p>{{ movie.synopsis }}</p>
                   </div>
                   <div class="p-3">
                       <h3>Archives</h3>
