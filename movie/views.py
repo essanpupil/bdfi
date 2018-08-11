@@ -25,3 +25,9 @@ class MovieList(ListView):
     model = Movie
     template_name = 'movie/movie_list.html'
     queryset = Movie.objects.filter(category=Movie.FILM)
+
+
+class TVList(ListView):
+    model = Movie
+    template_name = 'movie/tv_list.html'
+    queryset = Movie.objects.filter(category=Movie.TV_SERIES)
