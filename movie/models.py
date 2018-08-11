@@ -3,13 +3,6 @@ from django.db import models
 from embed_video.fields import EmbedVideoField
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=32, unique=True)
-
-    def __str__(self):
-        return self.name
-
-
 class Genre(models.Model):
     name = models.CharField(max_length=32)
 
@@ -32,11 +25,19 @@ class ProductionHouse(models.Model):
 
 
 class Movie(models.Model):
+    FILM = 'film'
+    TV_SERIES = 'tv'
+    FTV = 'ftv'
+    CATEGORY_CHOICES = (
+        (FILM, 'Film'),
+        (TV_SERIES, 'TV'),
+        (FTV, 'FTV')
+    )
     title = models.CharField(max_length=255)
     release_date = models.DateField()
     production_house = models.ForeignKey(ProductionHouse, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null=True)
+    category = models.CharField(max_length=32, choices=CATEGORY_CHOICES, default=FILM)
+    genre = models.ManyToManyField(Genre)
     video = EmbedVideoField(null=True)
     synopsis = models.TextField(null=True)
 
