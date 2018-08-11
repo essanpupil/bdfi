@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
 from movie.models import Movie, Genre
 
@@ -19,3 +19,8 @@ def home(request):
 class FilmDetail(DetailView):
     model = Movie
     template_name = 'movie/movie_detail.html'
+
+
+class MovieList(ListView):
+    model = Movie
+    template_name = 'movie/movie_list.html'
