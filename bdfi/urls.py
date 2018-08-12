@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', movie_views.home, name='home'),
-    path('movie/', include('movie.urls', namespace='movie'))
+    path('movie/', include('movie.urls', namespace='movie')),
+    path('news/', include('news.urls', namespace='news')),
 ]
 
 if settings.DEBUG:
