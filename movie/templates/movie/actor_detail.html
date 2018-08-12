@@ -34,6 +34,7 @@
                   </div><!-- /.blog-post -->
               </div>
               <aside class="col-md-4 blog-sidebar">
+                  {% block sidebar %}
                   <div class="p-3 bg-light rounded">
                       <h3>Synopsis</h3>
                       <p>{{ movie.synopsis }}</p>
@@ -63,6 +64,7 @@
                           <li><a href="#">Facebook</a></li>
                       </ol>
                   </div>
+                  {% endblock %}
               </aside>
 
           </div>
