@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, ListView
 
 from movie.models import Movie, Genre, Actor
@@ -18,8 +18,10 @@ def home(request):
 
 
 class UserProfile(DetailView):
-    model = User
-    template_name = 'movie/account_profile.html'
+    template_name = 'account/profile.html'
+
+    def get_object(self):
+        return get_object_or_404(User, pk=self.request.user.id)
 
 
 class FilmDetail(DetailView):
