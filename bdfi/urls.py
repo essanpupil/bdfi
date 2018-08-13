@@ -21,6 +21,8 @@ from bdfi import settings
 from movie import views as movie_views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('profile/<int:pk>', movie_views.UserProfile.as_view(), name='account_profile'),
+    url(r'^accounts/', include('allauth.urls')),
 
     path('', movie_views.home, name='home'),
     path('movie/', include('movie.urls', namespace='movie')),

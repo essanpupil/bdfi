@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
@@ -14,6 +15,11 @@ def home(request):
         'newest_film': newest_film,
     }
     return render(request, 'movie/index.html', context)
+
+
+class UserProfile(DetailView):
+    model = User
+    template_name = 'movie/account_profile.html'
 
 
 class FilmDetail(DetailView):
