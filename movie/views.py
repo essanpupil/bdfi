@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView, ListView
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView, UpdateView
 
 from movie.models import Movie, Genre, Actor
 
@@ -17,8 +18,10 @@ def home(request):
     return render(request, 'movie/index.html', context)
 
 
-class UserProfile(DetailView):
+class UserProfile(UpdateView):
+    fields = ['first_name', 'last_name', 'email']
     template_name = 'account/profile.html'
+    success_url = reverse_lazy('account_profile')
 
     def get_object(self):
         return get_object_or_404(User, pk=self.request.user.id)
