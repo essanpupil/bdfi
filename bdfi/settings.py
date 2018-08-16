@@ -163,3 +163,11 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'essanpupil@gmail.com'
+EMAIL_HOST_PASSWORD = 'sandi'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
