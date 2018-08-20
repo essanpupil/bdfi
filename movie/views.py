@@ -4,13 +4,16 @@ from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, UpdateView
 
 from movie.models import Movie, Genre, Actor
+from news.models import News
 
 
 def home(request):
+    feature_news = News.objects.order_by('-id')[:3]
     feature_films = Movie.objects.order_by('?')[:3]
     genre_list = Genre.objects.order_by('?')
     context = {
         'feature_films': feature_films,
+        'feature_news': feature_news,
         'genre_list': genre_list,
     }
     return render(request, 'movie/index.html', context)
