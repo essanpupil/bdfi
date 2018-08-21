@@ -1,0 +1,30 @@
+{% extends 'movie/index.html' %}
+{% block page_content %}
+<div class="container">
+    {% block widgets %}
+        {{ block.super }}
+    {% endblock widgets %}
+    {% block main_content %}
+    {% endblock main_content %}
+</div>
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <h1>Logout</h1>
+            <p>Apakah anda yakin ingin keluar?</p>
+            <form method="post" action="{% url 'account_logout' %}">
+              {% csrf_token %}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+              {% endif %}
+              <button type="submit">Keluar</button>
+            </form>
+        </div>
+        <aside class="col-md-4 blog-sidebar">
+            {% block sidebar %}
+            {{ block.super }}
+            {% endblock sidebar %}
+        </aside>
+    </div>
+</main>
+{% endblock page_content %}
