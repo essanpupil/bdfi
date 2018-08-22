@@ -71,7 +71,7 @@
                 <h3 class="pb-3 mb-4 font-italic border-bottom">Berita Terbaru</h3>
                 {% for info in feature_news %}
                 <div class="blog-post">
-                    <h2 class="blog-post-title">{{ info.title }}</h2>
+                    <h2 class="blog-post-title"><a href="{% url 'news:detail' info.id %}">{{ info.title }}</a></h2>
                     <p class="blog-post-meta">{{ info.publish_date }}</p>
                     <p>{{ info.content|truncatewords:20 }}</p>
                 </div><!-- /.blog-post -->
