@@ -11,10 +11,12 @@ def home(request):
     feature_actor = Actor.objects.order_by('?').first()
     feature_news = News.objects.order_by('-id')[:3]
     feature_films = Movie.objects.order_by('?')[:3]
+    hot_films = Movie.objects.order_by('-release_date')[:10]
     genre_list = Genre.objects.order_by('?')
     context = {
         'feature_actor': feature_actor,
         'feature_films': feature_films,
+        'hot_films': hot_films,
         'feature_news': feature_news,
         'genre_list': genre_list,
     }
