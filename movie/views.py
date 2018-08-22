@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, UpdateView
 
-from movie.models import Movie, Genre, Actor
+from movie.models import Movie, Genre, Actor, Cast
 from news.models import News
 
 
@@ -33,6 +33,12 @@ class UserProfile(UpdateView):
 class FilmDetail(DetailView):
     model = Movie
     template_name = 'movie/movie_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(FilmDetail, self).get_context_data(**kwargs)
+        casted_actor = Cast.objects.filter(movie=self.object).order_by('?').first()
+        context['casted_actor'] = casted_actor.actor
+        return context
 
 
 class ActorDetail(DetailView):

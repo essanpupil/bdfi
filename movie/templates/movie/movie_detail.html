@@ -28,14 +28,14 @@
                     <h2>Pemain</h2>
                       <table>
                           {% for cast in movie.cast_set.all %}
-                          <tr><td>{{ cast.actor }}</td><td> -> </td><td>{{ cast.play_as }}</td></tr>
+                          <tr><td><a href="{% url 'movie:actor_detail' cast.actor.id %}">{{ cast.actor }}</a></td><td> -> </td><td>{{ cast.play_as }}</td></tr>
                           {% endfor %}
                       </table>
                   </div><!-- /.blog-post -->
               </div>
               <aside class="col-md-4 blog-sidebar">
                   {% block sidebar %}
-                        {{ block.super }}
+                  {% include 'movie/sidebars/movie_detail_sidebar.html' %}
                   {% endblock %}
               </aside>
 
