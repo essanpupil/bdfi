@@ -58,7 +58,8 @@ class Actor(models.Model):
     fullname = models.CharField(max_length=255)
     birth_of_date = models.DateField()
     place_of_birth = models.ForeignKey(Location, on_delete=models.CASCADE)
-    role = models.ManyToManyField(Role, null=True)
+    role = models.ManyToManyField(Role)
+    biography = models.TextField()
 
     def __str__(self):
         return self.name
