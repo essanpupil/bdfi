@@ -1,5 +1,5 @@
 {% extends 'movie/index.html' %}
-{% load static embed_video_tags %}
+{% load static embed_video_tags debug_tags %}
 {% block page_content %}
     <div class="container">
         {% block widgets %}
@@ -17,17 +17,19 @@
               <div class="col-md-8 blog-main">
                   <div class="blog-post">
                     <table>
+                        <tr><th>Nama lengkap</th><td>&nbsp;</td><td>{{ actor.fullname }}</td></tr>
                         <tr><th>Tempat lahir</th><td>&nbsp;</td><td>{{ actor.place_of_birth }}</td></tr>
                         {% for role in actor.role_set.all %}
                             <tr><th>Profesi</th><td>&nbsp;</td><td>{{ role.name }}</td></tr>
                         {% endfor %}
                     </table>
                       <hr>
+                      <p>{{ actor.biography }}</p>
                     <h2>Film</h2>
                       <table>
-                          {% for cast in movie.cast_set.all %}
+                          {% for cast in actor.cast_set.all %}
                               {% if cast.actor == actor %}
-                                  <tr><td>{{ cast.actor }}</td><td> -> </td><td>{{ cast.play_as }}</td></tr>
+                                  <tr><td><a href="{% url 'movie:detail' cast.movie.id %}">{{ cast.movie }}</a></td><td> -> </td><td>{{ cast.play_as }}</td></tr>
                               {% endif %}
                           {% endfor %}
                       </table>
