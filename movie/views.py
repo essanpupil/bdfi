@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, ListView, UpdateView
+from django.views.generic import DetailView, ListView, UpdateView, CreateView
 
+from movie import forms
 from movie.models import Movie, Genre, Actor, Cast
 from news.models import News
 
@@ -43,15 +44,22 @@ class FilmDetail(DetailView):
         return context
 
 
-class ActorDetail(DetailView):
-    model = Actor
-    template_name = 'movie/actor_detail.html'
+class CreateMovie(CreateView):
+    model = Movie
+    form_class = forms.MovieForm
+    template_name = 'movie/movie_form.html'
+    success_url = reverse_lazy('movie:movie_list')
 
 
 class MovieList(ListView):
     model = Movie
     template_name = 'movie/movie_list.html'
     queryset = Movie.objects.filter(category=Movie.FILM)
+
+
+class ActorDetail(DetailView):
+    model = Actor
+    template_name = 'movie/actor_detail.html'
 
 
 class TVList(ListView):
