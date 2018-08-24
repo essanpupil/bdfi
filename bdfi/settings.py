@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'template_debug',
     'embed_video',
     'debug_toolbar',
-    'rest_framework',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -153,14 +152,6 @@ EMBED_VIDEO_BACKENDS = (
 )
 
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
-
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
