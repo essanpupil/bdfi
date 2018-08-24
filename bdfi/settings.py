@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'dal',
+    'dal_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'movie',
     'news',
 
+    'crispy_forms',
+    'template_debug',
     'embed_video',
     'debug_toolbar',
     'rest_framework',
@@ -65,6 +69,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bdfi.urls'
 
+TEMPLATE_DEBUG = DEBUG
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -165,9 +170,13 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 25
+EMAIL_PORT = 587
 EMAIL_HOST_USER = 'essanpupil@gmail.com'
-EMAIL_HOST_PASSWORD = 'sandi'
+EMAIL_HOST_PASSWORD = "gliserinkadal"
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
