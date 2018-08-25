@@ -40,7 +40,8 @@ class FilmDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(FilmDetail, self).get_context_data(**kwargs)
         casted_actor = Cast.objects.filter(movie=self.object).order_by('?').first()
-        context['casted_actor'] = casted_actor.actor
+        if casted_actor:
+            context['casted_actor'] = casted_actor.actor
         return context
 
 
